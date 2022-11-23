@@ -1,10 +1,24 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/journal">Journal</router-link>
   </nav>
   <router-view/>
 </template>
+
+<script>
+import { useClient } from 'villus';
+
+export default {
+  name: 'App',
+  setup() {
+    useClient({
+      url: 'http://localhost:8000/graphql',
+    });
+  },
+};
+</script>
 
 <style lang="scss">
 #app {

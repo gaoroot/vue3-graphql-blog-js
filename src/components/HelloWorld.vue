@@ -34,6 +34,9 @@
 <script>
 export default {
   name: 'HelloWorld',
+  created(){
+        document.title = "Страница | Hello World" //title
+    },
   props: {
     msg: String
   }
